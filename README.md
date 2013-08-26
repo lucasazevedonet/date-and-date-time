@@ -1,7 +1,7 @@
 Component date and date/time
 ==================
 
-Component Date and Date/Time for mobile and  browser without javascript
+Cross-device component Date and Date/Time for mobile and  browser without javascript
 
 ```
 
