@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html manifest="../cache.manifest">
+<head>
+  <meta charset="utf-8">
+  <title>Waiter</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  <style type="text/css">
+
+    html, body{
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .field{
+      width:49.9%;
+      float: left;
+      padding:0 7px;
+      box-sizing: border-box;
+    }
+
+    label{
+      clear:both;
+      float:none;
+      display: block;
+      margin-bottom:10px;
+    }
+
+    span.h{
+      float:left;
+      width: 33.3%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+
+
+    select.hour{
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+      background: #f9f9f9;
+      border-style:solid;
+      border-widht:1px;
+      font-style:italic;
+      outline:0;
+      -webkit-appearance: none;
+      text-align: right;
+    }
+
+    .h1{
+      border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
+      border-radius:5px 0 0 5px;
+    }
+
+    .h2:before{
+      content:":";
+      position: absolute;
+      font-size:32px;
+      border-color:#bbbbbb ;
+      height: 40px;
+      color:#999999;
+      width:10px;
+      top:0;
+      left: 0;
+    }
+
+    .h2{
+      border-color:#bbbbbb transparent #bbbbbb transparent;
+    }
+
+    .h2:after{
+      content:":";
+      position: absolute;
+      font-size:32px;
+      border-color:#bbbbbb  ;
+      height: 40px;
+      color:#999999;
+      width:10px;
+      top:0;
+      right: 0;
+    }
+
+    .h3{
+      border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
+      border-radius:0 5px 5px 0;
+    }
+
+    span.d{
+      float:left;
+      width:100%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    select.date{
+      margin: 0;
+      padding: 10px;
+      width: 33.3%;
+      background: #f9f9f9;
+      border-style:solid;
+      border-widht:1px;
+      font-style:italic;
+      outline:0;
+      -webkit-appearance: none;
+      float: left;
+    }
+
+    .d1{
+      border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
+      border-radius:5px 0 0 5px;
+      z-index:0;
+      padding-right: 5px;
+    }
+
+    .d2{
+      border-color:#bbbbbb ;
+      border-width:1px ;
+      -webkit-transform:skewX(170deg);
+      margin: 0 -5px !important;
+      z-index: 99;
+    }
+
+    .d3{
+      border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
+      border-radius:0 5px 5px 0;
+      z-index:0;
+      padding-left: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1> beta </h1> 
+<small>
+  The best solution for components of date and time for mobile and browser without using plugins javascript
+</small>
+<br>
+<hr>
+
+  <div class="field">
+    <label>Hour foda </label>
+
+    <span class="h">
+      <select type="text" class="hour h1"  dir="rtl">
+        <option>0</option>
+        <option>31</option>
+      </select>
+    </span>
+
+    <span class="h h2">
+      <select type="text" class="hour h2"  dir="rtl">
+        <option>10</option>
+        <option>31</option>
+      </select>
+    </span>
+
+    <span class="h">
+      <select type="text" class="hour h3"  dir="rtl">
+        <option>52</option>
+        <option>31</option>
+      </select>
+    </span>
+  </div>
+
+
+
+  <div class="field">
+    <label>Date foda </label>
+
+    <span class="d">
+      <select type="text" class="date d1">
+        <option>30</option>
+        <option>31</option>
+      </select>
+      <select type="text" class="date d2">
+        <option>10</option>
+        <option>31</option>
+      </select>
+      <select type="text" class="date d3" >
+        <option>1986</option>
+        <option>1985</option>
+      </select>
+    </span>
+  </div>
+
+</body>
+</html>
