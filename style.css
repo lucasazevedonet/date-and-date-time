@@ -90,7 +90,7 @@ select.date{
   border-radius:5px 0 0 5px;
   z-index:0;
   padding-right: 5px;
-  width: 25%;
+  width: 28%;
 }
 .selectMouth{
   border-color:#bbbbbb ;
@@ -98,12 +98,12 @@ select.date{
   -webkit-transform:skewX(170deg);
   margin: 0 -5px !important;
   z-index: 99;
-  width: 25%;
+  width: 28%;
 }
 .selectYear{
   border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
   border-radius:0 5px 5px 0;
   z-index:0;
   padding-left: 5px;
-  width: 50%;
+  width: 44%;
 }
