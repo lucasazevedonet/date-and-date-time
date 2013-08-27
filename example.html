@@ -10,119 +10,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  <style type="text/css">
-
-html, body{
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-label{
-  clear:both;
-  float:none;
-  display: block;
-  margin-bottom:10px;
-}
-
-.field{
-  width:49.9%;
-  float: left;
-  padding:0 7px;
-  box-sizing: border-box;
-}
-
-span.hours, 
-span.dates{
-  float:left;
-  width:100%;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.hours:before{
-  content:":";
-  position: absolute;
-  font-size:32px;
-  border-color:#bbbbbb ;
-  height: 40px;
-  color:#999999;
-  width:10px;
-  top:0;
-  left: 33%;
-  line-height: 32px;
-}
-
-.hours:after{
-  content:":";
-  position: absolute;
-  font-size:32px;
-  border-color:#bbbbbb  ;
-  height: 40px;
-  color:#999999;
-  width:10px;
-  top:0;
-  right: 33%;
-  line-height: 32px;
-}
-
-select.hour, 
-select.date{
-  margin: 0;
-  padding: 10px;
-  background: #f9f9f9;
-  border-style:solid;
-  border-width:1px;
-  font-style:italic;
-  outline:0;
-  -webkit-appearance: none;
-  float: left;
-}
-
-/*hours*/
-
-.selectHour{
-  border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
-  border-radius:5px 0 0 5px;
-  width: 33.3% !important;
-}
-.selectMinutes{
-  border-color:#bbbbbb transparent #bbbbbb transparent;
-  width: 33.3% !important;
-}
-.selectSeconds{
-  border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
-  border-radius:0 5px 5px 0;
-  width: 33.3% !important;
-}
-
-/*dates*/
-
-.selectDay{
-  border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
-  border-radius:5px 0 0 5px;
-  z-index:0;
-  padding-right: 5px;
-  width: 25%;
-}
-.selectMouth{
-  border-color:#bbbbbb ;
-  border-width:1px ;
-  -webkit-transform:skewX(170deg);
-  margin: 0 -5px !important;
-  z-index: 99;
-  width: 25%;
-}
-.selectYear{
-  border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
-  border-radius:0 5px 5px 0;
-  z-index:0;
-  padding-left: 5px;
-  width: 50%;
-}
-
-  </style>
 </head>
 <body>
 
@@ -354,7 +243,6 @@ select.date{
    </select>
  </span>
 </div>
-
 
 </body>
 </html>
