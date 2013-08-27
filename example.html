@@ -13,127 +13,114 @@
 
   <style type="text/css">
 
-    html, body{
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
+html, body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-    .field{
-      width:49.9%;
-      float: left;
-      padding:0 7px;
-      box-sizing: border-box;
-    }
+label{
+  clear:both;
+  float:none;
+  display: block;
+  margin-bottom:10px;
+}
 
-    label{
-      clear:both;
-      float:none;
-      display: block;
-      margin-bottom:10px;
-    }
+.field{
+  width:49.9%;
+  float: left;
+  padding:0 7px;
+  box-sizing: border-box;
+}
 
-    span.h{
-      float:left;
-      width: 33.3%;
-      position: relative;
-      box-sizing: border-box;
-    }
+span.hours, 
+span.dates{
+  float:left;
+  width:100%;
+  position: relative;
+  box-sizing: border-box;
+}
 
+.hours:before{
+  content:":";
+  position: absolute;
+  font-size:32px;
+  border-color:#bbbbbb ;
+  height: 40px;
+  color:#999999;
+  width:10px;
+  top:0;
+  left: 33%;
+  line-height: 32px;
+}
 
+.hours:after{
+  content:":";
+  position: absolute;
+  font-size:32px;
+  border-color:#bbbbbb  ;
+  height: 40px;
+  color:#999999;
+  width:10px;
+  top:0;
+  right: 33%;
+  line-height: 32px;
+}
 
-    select.hour{
-      margin: 0;
-      padding: 10px;
-      width: 100%;
-      background: #f9f9f9;
-      border-style:solid;
-      border-widht:1px;
-      font-style:italic;
-      outline:0;
-      -webkit-appearance: none;
-      text-align: right;
-    }
+select.hour, 
+select.date{
+  margin: 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border-style:solid;
+  border-width:1px;
+  font-style:italic;
+  outline:0;
+  -webkit-appearance: none;
+  float: left;
+}
 
-    .h1{
-      border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
-      border-radius:5px 0 0 5px;
-    }
+/*hours*/
 
-    .h2:before{
-      content:":";
-      position: absolute;
-      font-size:32px;
-      border-color:#bbbbbb ;
-      height: 40px;
-      color:#999999;
-      width:10px;
-      top:0;
-      left: 0;
-    }
+.selectHour{
+  border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
+  border-radius:5px 0 0 5px;
+  width: 33.3% !important;
+}
+.selectMinutes{
+  border-color:#bbbbbb transparent #bbbbbb transparent;
+  width: 33.3% !important;
+}
+.selectSeconds{
+  border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
+  border-radius:0 5px 5px 0;
+  width: 33.3% !important;
+}
 
-    .h2{
-      border-color:#bbbbbb transparent #bbbbbb transparent;
-    }
+/*dates*/
 
-    .h2:after{
-      content:":";
-      position: absolute;
-      font-size:32px;
-      border-color:#bbbbbb  ;
-      height: 40px;
-      color:#999999;
-      width:10px;
-      top:0;
-      right: 0;
-    }
-
-    .h3{
-      border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
-      border-radius:0 5px 5px 0;
-    }
-
-    span.d{
-      float:left;
-      width:100%;
-      position: relative;
-      box-sizing: border-box;
-    }
-
-    select.date{
-      margin: 0;
-      padding: 10px;
-      width: 33.3%;
-      background: #f9f9f9;
-      border-style:solid;
-      border-widht:1px;
-      font-style:italic;
-      outline:0;
-      -webkit-appearance: none;
-      float: left;
-    }
-
-    .d1{
-      border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
-      border-radius:5px 0 0 5px;
-      z-index:0;
-      padding-right: 5px;
-    }
-
-    .d2{
-      border-color:#bbbbbb ;
-      border-width:1px ;
-      -webkit-transform:skewX(170deg);
-      margin: 0 -5px !important;
-      z-index: 99;
-    }
-
-    .d3{
-      border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
-      border-radius:0 5px 5px 0;
-      z-index:0;
-      padding-left: 5px;
-    }
+.selectDay{
+  border-color:#bbbbbb transparent #bbbbbb  #bbbbbb;
+  border-radius:5px 0 0 5px;
+  z-index:0;
+  padding-right: 5px;
+  width: 25%;
+}
+.selectMouth{
+  border-color:#bbbbbb ;
+  border-width:1px ;
+  -webkit-transform:skewX(170deg);
+  margin: 0 -5px !important;
+  z-index: 99;
+  width: 25%;
+}
+.selectYear{
+  border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
+  border-radius:0 5px 5px 0;
+  z-index:0;
+  padding-left: 5px;
+  width: 50%;
+}
 
   </style>
 </head>
@@ -146,51 +133,228 @@
 <br>
 <hr>
 
-  <div class="field">
-    <label>Hour foda </label>
+<div class="field">
+  <label>Hour </label>
+  <span class="hours">
+    <select type="text" class="hour selectHour"  dir="rtl">
+      <option value="">01h</option>
+      <option value="">02h</option>
+      <option value="">03h</option>
+      <option value="">04h</option>
+      <option value="">05h</option>
+      <option value="">06h</option>
+      <option value="">07h</option>
+      <option value="">08h</option>
+      <option value="">09h</option>
+      <option value="">10h</option>
+      <option value="">11h</option>
+      <option value="">12h</option>
+      <option value="">13h</option>
+      <option value="">14h</option>
+      <option value="">15h</option>
+      <option value="">16h</option>
+      <option value="">17h</option>
+      <option value="">18h</option>
+      <option value="">19h</option>
+      <option value="">20h</option>
+      <option value="">21h</option>
+      <option value="">22h</option>
+      <option value="">23h</option>
+      <option value="">24h</option>
+    </select>
+    <select type="text" class="hour selectMinutes"  dir="rtl">
 
-    <span class="h">
-      <select type="text" class="hour h1"  dir="rtl">
-        <option>0</option>
-        <option>31</option>
-      </select>
-    </span>
+      <option value="">01m</option>
+      <option value="">02m</option>
+      <option value="">03m</option>
+      <option value="">04m</option>
+      <option value="">05m</option>
+      <option value="">06m</option>
+      <option value="">07m</option>
+      <option value="">08m</option>
+      <option value="">09m</option>
+      <option value="">10m</option>
+      <option value="">11m</option>
+      <option value="">12m</option>
+      <option value="">13m</option>
+      <option value="">14m</option>
+      <option value="">15m</option>
+      <option value="">16m</option>
+      <option value="">17m</option>
+      <option value="">18m</option>
+      <option value="">19m</option>
+      <option value="">20m</option>
+      <option value="">21m</option>
+      <option value="">22m</option>
+      <option value="">23m</option>
+      <option value="">24m</option>
+      <option value="">25m</option>
+      <option value="">26m</option>
+      <option value="">27m</option>
+      <option value="">28m</option>
+      <option value="">29m</option>
+      <option value="">30m</option>
+      <option value="">31m</option>
+      <option value="">32m</option>
+      <option value="">33m</option>
+      <option value="">34m</option>
+      <option value="">35m</option>
+      <option value="">36m</option>
+      <option value="">37m</option>
+      <option value="">38m</option>
+      <option value="">39m</option>
+      <option value="">40m</option>
+      <option value="">41m</option>
+      <option value="">42m</option>
+      <option value="">43m</option>
+      <option value="">44m</option>
+      <option value="">45m</option>
+      <option value="">46m</option>
+      <option value="">47m</option>
+      <option value="">48m</option>
+      <option value="">49m</option>
+      <option value="">50m</option>
+      <option value="">51m</option>
+      <option value="">52m</option>
+      <option value="">53m</option>
+      <option value="">54m</option>
+      <option value="">55m</option>
+      <option value="">56m</option>
+      <option value="">57m</option>
+      <option value="">58m</option>
+      <option value="">59m</option>
+      <option value="">60m</option>
+    </select>
+    <select type="text" class="hour selectSeconds"  dir="rtl">
+      <option value="">01s</option>
+      <option value="">02s</option>
+      <option value="">03s</option>
+      <option value="">04s</option>
+      <option value="">05s</option>
+      <option value="">06s</option>
+      <option value="">07s</option>
+      <option value="">08s</option>
+      <option value="">09s</option>
+      <option value="">10s</option>
+      <option value="">11s</option>
+      <option value="">12s</option>
+      <option value="">13s</option>
+      <option value="">14s</option>
+      <option value="">15s</option>
+      <option value="">16s</option>
+      <option value="">17s</option>
+      <option value="">18s</option>
+      <option value="">19s</option>
+      <option value="">20s</option>
+      <option value="">21s</option>
+      <option value="">22s</option>
+      <option value="">23s</option>
+      <option value="">24s</option>
+      <option value="">25s</option>
+      <option value="">26s</option>
+      <option value="">27s</option>
+      <option value="">28s</option>
+      <option value="">29s</option>
+      <option value="">30s</option>
+      <option value="">31s</option>
+      <option value="">32s</option>
+      <option value="">33s</option>
+      <option value="">34s</option>
+      <option value="">35s</option>
+      <option value="">36s</option>
+      <option value="">37s</option>
+      <option value="">38s</option>
+      <option value="">39s</option>
+      <option value="">40s</option>
+      <option value="">41s</option>
+      <option value="">42s</option>
+      <option value="">43s</option>
+      <option value="">44s</option>
+      <option value="">45s</option>
+      <option value="">46s</option>
+      <option value="">47s</option>
+      <option value="">48s</option>
+      <option value="">49s</option>
+      <option value="">50s</option>
+      <option value="">51s</option>
+      <option value="">52s</option>
+      <option value="">53s</option>
+      <option value="">54s</option>
+      <option value="">55s</option>
+      <option value="">56s</option>
+      <option value="">57s</option>
+      <option value="">58s</option>
+      <option value="">59s</option>
+      <option value="">60s</option>
+    </select>
+  </span>
+</div>
 
-    <span class="h h2">
-      <select type="text" class="hour h2"  dir="rtl">
-        <option>10</option>
-        <option>31</option>
-      </select>
-    </span>
+<div class="field">
+  <label>Date </label>
+  <span class="dates">
+    <select type="text" class="date selectDay">
+      <option value="">01</option>
+      <option value="">02</option>
+      <option value="">03</option>
+      <option value="">04</option>
+      <option value="">05</option>
+      <option value="">06</option>
+      <option value="">07</option>
+      <option value="">08</option>
+      <option value="">09</option>
+      <option value="">10</option>
+      <option value="">11</option>
+      <option value="">12</option>
+      <option value="">13</option>
+      <option value="">14</option>
+      <option value="">15</option>
+      <option value="">16</option>
+      <option value="">17</option>
+      <option value="">18</option>
+      <option value="">19</option>
+      <option value="">20</option>
+      <option value="">21</option>
+      <option value="">22</option>
+      <option value="">23</option>
+      <option value="">24</option>
+      <option value="">25</option>
+      <option value="">26</option>
+      <option value="">27</option>
+      <option value="">28</option>
+      <option value="">29</option>
+      <option value="">30</option>
+      <option value="">31</option>
+    </select>
+    <select type="text" class="date selectMouth">
+      <option value="">01</option>
+      <option value="">02</option>
+      <option value="">03</option>
+      <option value="">04</option>
+      <option value="">05</option>
+      <option value="">06</option>
+      <option value="">07</option>
+      <option value="">08</option>
+      <option value="">09</option>
+      <option value="">10</option>
+      <option value="">11</option>
+      <option value="">12</option>
+    </select>
+    <select type="text" class="date selectYear" >
+     <option value="">2011</option>
+     <option value="">2013</option>
+     <option value="">2014</option>
+     <option value="">2015</option>
+     <option value="">2016</option>
+     <option value="">2017</option>
+     <option value="">2018</option>
+     <option value="">2019</option>
+     <option value="">2020</option>
+     <option value="">2021</option>
+   </select>
+ </span>
+</div>
 
-    <span class="h">
-      <select type="text" class="hour h3"  dir="rtl">
-        <option>52</option>
-        <option>31</option>
-      </select>
-    </span>
-  </div>
-
-
-
-  <div class="field">
-    <label>Date foda </label>
-
-    <span class="d">
-      <select type="text" class="date d1">
-        <option>30</option>
-        <option>31</option>
-      </select>
-      <select type="text" class="date d2">
-        <option>10</option>
-        <option>31</option>
-      </select>
-      <select type="text" class="date d3" >
-        <option>1986</option>
-        <option>1985</option>
-      </select>
-    </span>
-  </div>
 
 </body>
 </html>
