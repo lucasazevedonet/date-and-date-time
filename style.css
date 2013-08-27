@@ -76,6 +76,7 @@ select.date{
 .selectMinutes{
   border-color:#bbbbbb transparent #bbbbbb transparent;
   width: 33.3% !important;
+  border-radius: 0;
 }
 .selectSeconds{
   border-color:#bbbbbb  #bbbbbb  #bbbbbb  transparent ;
@@ -93,6 +94,7 @@ select.date{
   width: 28%;
 }
 .selectMouth{
+  border-radius: 0;
   border-color:#bbbbbb ;
   border-width:1px ;
   -webkit-transform:skewX(170deg);
