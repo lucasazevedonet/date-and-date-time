@@ -1,4 +1,4 @@
-Component date and date/time
+Component date and datetime
 ==================
 
 Cross-device component Date and Date/Time for mobile and  browser without javascript
